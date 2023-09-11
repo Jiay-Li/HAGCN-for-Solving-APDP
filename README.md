@@ -1,3 +1,4 @@
 # HAGCN-for-Solving-APDP
-HA-GCN model for learning to solve the Asymmetric Pickup and Delivery Problem (APDP) using heterogeneous attention based graph convolutional network. Training with REINFORCE with rollout baseline.
-The code is currently being organized...
+HA-GCN model for learning to solve the Asymmetric Pickup and Delivery Problem (APDP) using heterogeneous attention based graph convolutional network. To ascertain the applicability of the proposed method in express hubs or logistics centers scenarios, we collect a large amount of customer information as a pool for a specific region, i.e., Furong District, Changsha City, China. The customer pool (customer information) is crawled from **Amap** , which provides geographical coordinates and a distance matrix of 700 locations in the studied region, with each location corresponding to a potential customer. The coordinates are determined based on the WGS84 international standard coordinate system, and the values in the distance matrix are determined based on the shortest driving routes obtained from actual navigation. Notably, the crawled data exhibits a salient asymmetry in distances between two nodes. 
+
+The experimental data used in this article has been made publicly available, where the geographic coordinates are in `coordinates_700` and the distance matrix is in `distance_matrix_700`.
