@@ -36,4 +36,4 @@ python eval.py --model 'outputs/pdp_20/pdp20_rollout_{datetime}/epoch-{epoch_num
 ```
 
 ## Acknowledgements
-Thanks to wouterkool/attention-learn-to-route for getting me started with the code for the Attention Model (AM).
+Thanks to [attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) for providing the initial codebase for the Attention Model (AM).
