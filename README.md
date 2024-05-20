@@ -35,4 +35,5 @@ To report the best of 1280 sampled solutions, you can execute the following comm
 python eval.py --model 'outputs/pdp_20/pdp20_rollout_{datetime}/epoch-{epoch_number}.pt' --decode_strategy sample --width 1280 --eval_batch_size 1
 ```
 
- 
+## Acknowledgements
+Thanks to wouterkool/attention-learn-to-route for getting me started with the code for the Attention Model (AM).
