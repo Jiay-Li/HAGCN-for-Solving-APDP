@@ -18,15 +18,20 @@ The experimental data used in this article has been made publicly available, whe
 ## Usage
 ### Training
 To train APDP instances with 20 nodes and use rollout as the REINFORCE baseline, you can execute the following command:
+
 `python run.py --graph_size 20 --baseline rollout`
 
 By default, training is conducted across all available GPUs. You can specify particular GPUs to use by setting the environment variable `CUDA_VISIBLE_DEVICES`. The command is as follows:
+
 `CUDA_VISIBLE_DEVICES=1,2 python run.py `
 
 ### Evaluation
 To evaluate a model, you can use `eval.py`. The command is as follows:
+
 `python eval.py --model 'outputs/pdp_20/pdp20_rollout_{datetime}/epoch-{epoch_number}.pt' --decode_strategy greedy`
+
 To report the best of 1280 sampled solutions, you can execute the following command:
+
 `python eval.py --model 'outputs/pdp_20/pdp20_rollout_{datetime}/epoch-{epoch_number}.pt' --decode_strategy sample --width 1280 --eval_batch_size 1`
 
  
