@@ -36,11 +36,11 @@ Due to the large size of APDP models, the trained models used for evaluating can
   
 The model files can be downloaded into the `outputs` folder for convenient access during evaluation.
 
-To evaluate a model, you can use `eval.py`. The command is as follows:
+To evaluate a model, you can use `eval.py`. Foe example, to test the APDP21 model, the command is as follows:
 ```
 python eval.py --model 'outputs/pdp_20/run_20230413T095145/epoch-49.pt' --decode_strategy greedy
 ```
-To report the best of 1280 sampled solutions, you can execute the following command:
+To report the best of 1280 sampled solutions, you can execute the following command to test the APDP21 model:
 ```
 python eval.py --model 'outputs/pdp_20/run_20230413T095145/epoch-49.pt' --decode_strategy sample --width 1280 --eval_batch_size 1
 ```
