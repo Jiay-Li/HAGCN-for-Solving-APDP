@@ -16,6 +16,9 @@ The experimental data used in this article has been made publicly available, whe
 * tensorboard_logger
 
 ## Usage
+### Dataset
+
+
 ### Training
 To train APDP instances with 20 nodes and use rollout as the REINFORCE baseline, you can execute the following command:
 ```
@@ -26,14 +29,19 @@ By default, training is conducted across all available GPUs. You can specify par
 CUDA_VISIBLE_DEVICES=1,2 python run.py 
 ```
 ### Evaluation
+Due to the large size of APDP models, the trained models used for evaluating can be downloaded from the following link：
+* the model of APDP21: [pdp_20](https://drive.google.com/drive/folders/1do5XWDFNkOtzcydwaJS_JyE9-OfMczq2?usp=sharing)
+* the model of APDP51: [pdp_50](https://drive.google.com/drive/folders/1N7b0BAbFjzeMhXFPr_fOv4nwqK9TLtNd?usp=sharing)
+* the model of APDP101: [pdp_100](https://drive.google.com/drive/folders/1pm84NpxQIAwQJofjfPtAeGwohrP6O3SL?usp=sharing)
+The model files can be downloaded into the `outputs` folder for convenient access during evaluation.
+
 To evaluate a model, you can use `eval.py`. The command is as follows:
 ```
-python eval.py --model 'outputs/pdp_20/pdp20_rollout_{datetime}/epoch-{epoch_number}.pt' --decode_strategy greedy
+python eval.py --model 'outputs/pdp_20/run_{datetime}/epoch-{epoch_number}.pt' --decode_strategy greedy
 ```
 To report the best of 1280 sampled solutions, you can execute the following command:
 ```
-python eval.py --model 'outputs/pdp_20/pdp20_rollout_{datetime}/epoch-{epoch_number}.pt' --decode_strategy sample --width 1280 --eval_batch_size 1
+python eval.py --model 'outputs/pdp_20/run_{datetime}/epoch-{epoch_number}.pt' --decode_strategy sample --width 1280 --eval_batch_size 1
 ```
-
 ## Acknowledgements
 Thanks to [attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) for providing the initial codebase for the Attention Model (AM).
