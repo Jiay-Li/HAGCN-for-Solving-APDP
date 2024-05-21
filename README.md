@@ -30,9 +30,9 @@ CUDA_VISIBLE_DEVICES=1,2 python run.py
 ```
 ### Evaluation
 Due to the large size of APDP models, the trained models used for evaluating can be downloaded from the following link：
-* The model of APDP21: [pdp_20](https://drive.google.com/drive/folders/1do5XWDFNkOtzcydwaJS_JyE9-OfMczq2?usp=sharing)
-* The model of APDP51: [pdp_50](https://drive.google.com/drive/folders/1N7b0BAbFjzeMhXFPr_fOv4nwqK9TLtNd?usp=sharing)
-* The model of APDP101: [pdp_100](https://drive.google.com/drive/folders/1pm84NpxQIAwQJofjfPtAeGwohrP6O3SL?usp=sharing)
+* The model of APDP21: [pdp_20](https://drive.google.com/drive/folders/1gJJWrxah2GDpHft5ow8Ycmbpk7GRrJf9?usp=sharing)
+* The model of APDP51: [pdp_50](https://drive.google.com/drive/folders/12GsFQRMgvLn_CJ5liEzUfQQ56I4jMa43?usp=sharing)
+* The model of APDP101: [pdp_100](https://drive.google.com/drive/folders/19G7G99n1X6E-J-w1XsgPt7szyaMUWSEo?usp=sharing)
   
 The model files can be downloaded into the `outputs` folder for convenient access during evaluation.
 
