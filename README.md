@@ -1,5 +1,5 @@
 #  Heterogeneous Attention based Graph Convolutional Network for Solving Asymmetric Pickup and Delivery Problem
-HA-GCN model for learning to solve the Asymmetric Pickup and Delivery Problem (APDP) using heterogeneous attention and graph convolutional network. Training with REINFORCE with rollout baseline using real-world geographical information.
+The HA-GCN model addresses Asymmetric Pickup and Delivery Problem (APDP) by integrating heterogeneous attention (HA) and graph convolutional networks (GCN), aiming to capture both node and edge features present in APDP instances. Training utilizes REINFORCE with rollout baseline, incorporating real-world geographical information.
 
 ## Paper
 Our paper, **Heterogeneous Attention-based Graph Convolutional Network for Solving the Asymmetric Pickup and Delivery Problem**, is currently under review at *IEEE Transactions on Automation Science and Engineering*.
@@ -17,22 +17,22 @@ The experimental data used in this article has been made publicly available, whe
 
 ## Usage
 ### Dataset
-The customer location and distance data used for training and evaluating models can be found in the `data` folder. These data will be used to randomly generate instances of various sizes during training and evaluation.
+The customer location and distance data used for training and evaluating models are located in the `data` folder. These data will be utilized to randomly generate instances of different sizes throughout the training and evaluation processes.
 
 ### Training
-To train APDP instances with 20 nodes and use rollout as the REINFORCE baseline, you can execute the following command:
+To train APDP instances with 20 nodes and utilize rollout as the REINFORCE baseline, execute the following command:
 ```
 python run.py --graph_size 20 --baseline rollout
 ```
-By default, training is conducted across all available GPUs. You can specify particular GPUs to use by setting the environment variable `CUDA_VISIBLE_DEVICES`. The command is as follows:
+Training is typically conducted across all available GPUs by default. To specify specific GPUs for use, set the environment variable `CUDA_VISIBLE_DEVICES`. The command is outlined below:
 ```
 CUDA_VISIBLE_DEVICES=1,2 python run.py 
 ```
 ### Evaluation
 Due to the large size of APDP models, the trained models used for evaluating can be downloaded from the following link：
-* the model of APDP21: [pdp_20](https://drive.google.com/drive/folders/1do5XWDFNkOtzcydwaJS_JyE9-OfMczq2?usp=sharing)
-* the model of APDP51: [pdp_50](https://drive.google.com/drive/folders/1N7b0BAbFjzeMhXFPr_fOv4nwqK9TLtNd?usp=sharing)
-* the model of APDP101: [pdp_100](https://drive.google.com/drive/folders/1pm84NpxQIAwQJofjfPtAeGwohrP6O3SL?usp=sharing)
+* The model of APDP21: [pdp_20](https://drive.google.com/drive/folders/1do5XWDFNkOtzcydwaJS_JyE9-OfMczq2?usp=sharing)
+* The model of APDP51: [pdp_50](https://drive.google.com/drive/folders/1N7b0BAbFjzeMhXFPr_fOv4nwqK9TLtNd?usp=sharing)
+* The model of APDP101: [pdp_100](https://drive.google.com/drive/folders/1pm84NpxQIAwQJofjfPtAeGwohrP6O3SL?usp=sharing)
   
 The model files can be downloaded into the `outputs` folder for convenient access during evaluation.
 
