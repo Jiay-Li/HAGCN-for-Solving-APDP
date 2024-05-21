@@ -61,11 +61,11 @@ def mask_long_scatter(mask, values, check_unset=True):
     assert mask.size()[:-1] == values.size()
     rng = torch.arange(mask.size(-1), out=mask.new())
     values_ = values[..., None]  # Need to broadcast up do mask dim
-    # This indicates in which value of the mask a bit should be set这表示应该在掩码的哪个值中设置一个位
+    # This indicates in which value of the mask a bit should be set
     where = (values_ >= (rng * 64)) & (values_ < ((rng + 1) * 64))
     # Optional: check that bit is not already set
     assert not (check_unset and ((mask & (where.long() << (values_ % 64))) > 0).any())
-    # Set bit by shifting a 1 to the correct position通过将1移动到正确的位置来设置位
-    # (% not strictly necessary as bitshift is cyclic)%不是严格必要的，因为位移位是循环的
-    # since where is 0 if no value needs to be set, the bitshift has no effect由于如果不需要设置任何值，则where为0，因此位移位没有影响
+    # Set bit by shifting a 1 to the correct position
+    # (% not strictly necessary as bitshift is cyclic)%
+    # since where is 0 if no value needs to be set, the bitshift has no effect
     return mask | (where.long() << (values_ % 64))
