@@ -38,11 +38,11 @@ The model files can be downloaded into the `outputs` folder for convenient acces
 
 To evaluate a model, you can use `eval.py`. The command is as follows:
 ```
-python eval.py --model 'outputs/pdp_20/run_{datetime}/epoch-{epoch_number}.pt' --decode_strategy greedy
+python eval.py --model 'outputs/pdp_20/run_20230413T095145/epoch-49.pt' --decode_strategy greedy
 ```
 To report the best of 1280 sampled solutions, you can execute the following command:
 ```
-python eval.py --model 'outputs/pdp_20/run_{datetime}/epoch-{epoch_number}.pt' --decode_strategy sample --width 1280 --eval_batch_size 1
+python eval.py --model 'outputs/pdp_20/run_20230413T095145/epoch-49.pt' --decode_strategy sample --width 1280 --eval_batch_size 1
 ```
 ## Acknowledgements
 Thanks to [attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) for providing the initial codebase for the Attention Model (AM).
