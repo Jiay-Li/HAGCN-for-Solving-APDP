@@ -17,7 +17,7 @@ The experimental data used in this article has been made publicly available, whe
 
 ## Usage
 ### Dataset
-
+The customer location and distance data used for training and evaluating models can be found in the `data` folder. These data will be used to randomly generate instances of various sizes during training and evaluation.
 
 ### Training
 To train APDP instances with 20 nodes and use rollout as the REINFORCE baseline, you can execute the following command:
@@ -33,6 +33,7 @@ Due to the large size of APDP models, the trained models used for evaluating can
 * the model of APDP21: [pdp_20](https://drive.google.com/drive/folders/1do5XWDFNkOtzcydwaJS_JyE9-OfMczq2?usp=sharing)
 * the model of APDP51: [pdp_50](https://drive.google.com/drive/folders/1N7b0BAbFjzeMhXFPr_fOv4nwqK9TLtNd?usp=sharing)
 * the model of APDP101: [pdp_100](https://drive.google.com/drive/folders/1pm84NpxQIAwQJofjfPtAeGwohrP6O3SL?usp=sharing)
+  
 The model files can be downloaded into the `outputs` folder for convenient access during evaluation.
 
 To evaluate a model, you can use `eval.py`. The command is as follows:
