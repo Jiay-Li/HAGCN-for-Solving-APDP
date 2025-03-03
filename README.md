@@ -1,8 +1,19 @@
-#  Heterogeneous Attention based Graph Convolutional Network for Solving Asymmetric Pickup and Delivery Problem
+#  Heterogeneous Attention-based Graph Convolutional Network for Solving Asymmetric Pickup and Delivery Problem
 The HA-GCN model addresses Asymmetric Pickup and Delivery Problem (APDP) by integrating heterogeneous attention (HA) and graph convolutional networks (GCN), aiming to capture both node and edge features present in APDP instances. Training utilizes REINFORCE with rollout baseline, incorporating real-world geographical information.
 
 ## Paper
-Our paper, **Heterogeneous Attention-based Graph Convolutional Network for Solving the Asymmetric Pickup and Delivery Problem**, is currently under review at *IEEE Transactions on Automation Science and Engineering*.
+Our paper, **Heterogeneous Attention-based Graph Convolutional Network for Solving the Asymmetric Pickup and Delivery Problem**, is accepted at *IEEE Transactions on Automation Science and Engineering*.
+
+lf our work is helpful for your research, please cite our paper:
+```
+@article{li2025heterogeneous,
+title={Heterogeneous Attention-based Graph Convolutional Network for Solving the Asymmetric Pickup and Delivery Problem},
+author={Li, Jiayi and Wu, Guohua and Fan, Mingfeng and Cao, Zhiguang and Wang, Yalin},
+journal={IEEE Transactions on Neural Networks and Learning systems},
+year={2025},
+publisher={IEEE}
+}
+```
 
 ## Data
 To ascertain the applicability of the proposed method in express hubs or logistics centers scenarios, we collect a large amount of customer information as a pool for a specific region, i.e., Furong District, Changsha City, China. The customer pool (customer information) is crawled from **Amap**, which provides geographical coordinates and a distance matrix of 700 locations in the studied region, with each location corresponding to a potential customer. The coordinates are determined based on the WGS84 international standard coordinate system, and the values in the distance matrix are determined based on the shortest driving routes obtained from actual navigation. Notably, the crawled data exhibits a salient asymmetry in distances between two nodes. 
